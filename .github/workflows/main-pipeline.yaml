@@ -17,7 +17,7 @@ on:
       upload_artifact:
         description: 'Whether to upload artifact'
         type: boolean
-        default: true
+        default: false
 
 jobs:
   call-unified-pipeline:
