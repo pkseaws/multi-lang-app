@@ -1,0 +1,31 @@
+# multi-lang-app/.github/workflows/main-pipeline.yaml
+name: Multi Language App CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Language to build (java/python)'
+        required: true
+        default: 'java'
+      env:
+        description: 'Deployment environment'
+        required: true
+        default: 'dev'
+      upload_artifact:
+        description: 'Whether to upload artifact'
+        type: boolean
+        default: true
+
+jobs:
+  call-unified-pipeline:
+    uses: org-name/enterprise-cicd-pipeline/.github/workflows/unified-build-deployment.yaml@main
+    with:
+      language: ${{ github.event.inputs.language }}
+      env: ${{ github.event.inputs.env }}
+      upload_artifact: ${{ github.event.inputs.upload_artifact }}
+    secrets:
+      JAVA_DEPLOY_SECRET: ${{ secrets.JAVA_DEPLOY_SECRET }}
+      PYTHON_DEPLOY_SECRET: ${{ secrets.PYTHON_DEPLOY_SECRET }}
