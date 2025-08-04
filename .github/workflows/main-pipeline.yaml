@@ -25,7 +25,7 @@ jobs:
     with:
       language: ${{ github.event.inputs.language }}
       env: ${{ github.event.inputs.env }}
-      upload_artifact: ${{ github.event.inputs.upload_artifact }}
+      #upload_artifact: ${{ github.event.inputs.upload_artifact }}
    # secrets:
     #  JAVA_DEPLOY_SECRET: ${{ secrets.JAVA_DEPLOY_SECRET }}
      # PYTHON_DEPLOY_SECRET: ${{ secrets.PYTHON_DEPLOY_SECRET }}
