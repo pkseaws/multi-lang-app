@@ -20,11 +20,7 @@ on:
         default: false
 
 jobs:
-  checkout:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Source
-        uses: actions/checkout@v4
+
   call-unified-pipeline:
     uses: pkseaws/enterprise-cicd-pipeline/.github/workflows/unified-build-deployment.yml@main
     with:
