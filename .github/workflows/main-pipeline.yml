@@ -21,7 +21,7 @@ on:
 
 jobs:
   call-unified-pipeline:
-    uses: pkseaws/enterprise-cicd-pipeline/.github/workflows/unified-build-deployment.yaml@main
+    uses: pkseaws/enterprise-cicd-pipeline/.github/workflows/unified-build-deployment.yml@main
     with:
       language: ${{ github.event.inputs.language }}
       env: ${{ github.event.inputs.env }}
