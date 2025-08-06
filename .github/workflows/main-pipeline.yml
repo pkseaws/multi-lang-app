@@ -23,9 +23,9 @@ jobs:
 
   call-unified-pipeline:
     uses: pkseaws/enterprise-cicd-pipeline/.github/workflows/unified-build-deployment.yml@main
-    with:
-      language: java 
-      env: dev
+    #with:
+     # language: java 
+      #env: dev
       #upload_artifact: ${{ inputs.upload_artifact }}
     
    
