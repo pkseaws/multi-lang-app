@@ -4,6 +4,7 @@ name: Multi Language App CI/CD
 on:
   push:
     branches: [ main ]
+    
   workflow_dispatch:
     inputs:
       language:
@@ -24,8 +25,8 @@ jobs:
   call-unified-pipeline:
     uses: pkseaws/enterprise-cicd-pipeline/.github/workflows/unified-build-deployment.yml@main
     #with:
-     # language: java 
-      #env: dev
+     # language: true
+      #env: true
       #upload_artifact: ${{ inputs.upload_artifact }}
     
    
