@@ -27,6 +27,6 @@ jobs:
     with:
       language: '["java", "python"]'
       env: dev
-      upload_artifact: ${{ inputs.upload_artifact }}
+      upload_artifact: true
     
    
