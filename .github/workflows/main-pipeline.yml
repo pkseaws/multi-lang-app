@@ -18,7 +18,7 @@ on:
       upload_artifact:
         description: 'Whether to upload artifact'
         type: boolean
-        default: false
+        default: true
 
 jobs:
 
@@ -27,6 +27,6 @@ jobs:
     with:
       language: '["java", "python"]'
       env: dev
-      #upload_artifact: ${{ inputs.upload_artifact }}
+      upload_artifact: ${{ inputs.upload_artifact }}
     
    
